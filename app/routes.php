@@ -1,5 +1,8 @@
 <?php
 
+$app->get('/nadica-de-nada', '\App\Controller\NadicaDeController:nada')
+    ->setName('nadica-de-nada');
+
 $app->map(['GET', 'POST'], '/login', '\App\Controller\LoginController:loginAction')->setName('login');
 $app->get('/area-exclusiva', '\App\Controller\LoginController:areaExclusiva')->setName('area-exclusiva');
 $app->post('/login-area-exclusiva', '\App\Controller\LoginController:loginAreaExclusiva')->setName('login-exclusivo');
